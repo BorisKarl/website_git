@@ -1,0 +1,536 @@
+/* overall styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: royalblue;
+}
+
+.puffer {
+    padding: 20px;
+}
+
+
+h1 {
+    display: flex;
+    font-family: Helvetica;
+    font-style: italic;
+    color: rgb(243, 167, 179);
+    font-weight: 800px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 200px;
+    flex-wrap: wrap;
+}
+
+h2 {
+    display: flex;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 0px;
+    justify-content: center;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+    background-color: royalblue;
+    font-size: 100 px;
+    color: rosybrown;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 200px;
+}
+
+a:hover {
+    color: wheat;
+}
+
+.content {
+    padding: 50px;
+}
+
+/* index.php js display */
+
+div {
+    background: royalblue;
+    color: rgb(243, 167, 179);
+    text-align: center;
+
+}
+.drag_container {
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: 800px;
+}
+
+.drag {
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2em;
+
+}
+
+#das {
+    position: absolute;
+    left: 550px;
+    top: 40vh;
+    width: 100px;
+    height: 100px;
+
+}
+
+
+#ist {
+    position: absolute;
+    left: 750px;
+    top: 40.5vh;
+    width: 100px;
+    height: 100px;
+
+}
+
+#eine {
+    position: absolute;
+    left: 900px;
+    top: 40vh;
+    width: 150px;
+    height: 100px;
+
+}
+
+#website {
+    position: absolute;
+    left: 1100px;
+    top: 39.5vh;
+    width: 250px;
+    height: 100px;
+
+}
+
+#home {
+    font-size: 1rem;
+}
+
+/* for non mobile */
+
+.img_container {
+    visibility: hidden;
+}
+
+
+/* about.php style */
+
+.img-container {
+    padding-top: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+}
+
+
+#about_img {
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 5px;
+}
+
+.peter {
+    flex-direction: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8em;
+}
+
+#lebenslauf {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, max-content);
+    grid-template-columns: 0.5fr;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.3em;
+    color: rgb(240, 230, 232);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+p {
+    text-align: justify;
+    font-size: large;
+}
+
+.bottom-links {
+    margin: 1em;
+    font-size: x-large;
+}
+
+/* video.php styles */
+
+.media_container {
+    margin-top: 2%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.vid_1_text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        font-weight: 200px;
+        opacity: 0.5;
+        color: azure;
+        pointer-events: none;
+        /* don’t block video clicks */
+        position: absolute;
+        transition: opacity 150ms linear;
+}
+
+#finger {
+    width: 560px !important;
+    height: 315px !important;
+}
+
+.finger:hover>div {
+    opacity: 1;
+}
+
+/* fixed/sticky navbar */
+
+#navWrapper {
+    height: 3em;
+  }
+
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    font-style: normal;
+    font-size: 1.5em;
+    align-items: center;
+    height: 3em;
+    opacity: 0.95;
+}
+
+a.active {
+    color: aliceblue;
+    
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
+.platzhalter {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* musik.php styles */
+
+.musik_container {
+    display: grid;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    text-decoration: none;
+}
+
+
+.audio-player {
+    display: grid;
+    grid-gap: 10px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer */
+
+footer {
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    color: aliceblue;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    /* For mobile phones: */
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+       #navbar {
+       display: flex;
+       justify-content: space-around;
+       font-style: normal;
+       font-size: .7em;
+       align-items: center;
+       height: 3em;
+       opacity: 0.95;
+       }
+
+    img {
+        width: 100vw;
+     
+    }
+
+    .img-container {
+        width: 100vw;
+        align-items: flex-start;
+    }
+
+    #about_img {
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 5px;
+    }
+
+    iframe {
+        width: 95vw;
+        height: 50vh;
+    }
+    #lebenslauf {
+        grid-template-columns: 1fr;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 5px;
+
+    }
+    .fip {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          max-width: 95vw;
+          margin-left: 5px;
+        }
+
+    p {
+        text-align: left;
+    }
+
+   .displayIndex {
+        visibility: hidden;
+    }
+
+    .bottom-links {
+        display: block;
+    }
+
+    img {
+        visibility: visible;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 5px;
+    }
+
+}
+
+/* game styles */
+
+button {
+    background-color: royalblue;
+    color: rgb(243, 167, 179);
+    font-family: Helvetica;
+    font-style: italic;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: none;
+    padding-top: 5vh;
+    padding-left: 5vh;
+
+}
+
+/* gaes.php styles*/
+
+.container {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flexcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+button {
+    background-color: royalblue;
+    border: none;
+    color: wheat;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: rgb(169, 183, 224);
+}
+
+#gameCount {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#current,
+#points,
+#result,
+#computerWahl,
+#spielerWahl,
+#gameCount {
+    margin-top: 5px;
+    font-family: monospace;
+    color: white;
+    font-size: 2rem;
+}
+
+/* impressum styles */
+.impressum {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#fip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+
+/* not used
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgb(167, 176, 204), rgb(50, 18, 233));
+}
+
+ul,
+li {
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(243, 167, 179);
+    font-size: 160 px;
+    margin-top: 5vh;
+}
+
+
+
+
+.home-nav,
+#home {
+    margin-top: 15px;
+    display: block;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 360 px;
+    color: rosybrown;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 200px;
+}
+
+
+.idcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+.dropdown-content {
+    display: none;
+    height: 25vh;
+    position: center;
+    min-width: 100vw;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /*display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: violet;
+      font-size: xx-large;
+.headline {
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+    }
+dd menu 
+.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: xx-large;
+}
+
+.home-anchor {
+    display: flex;
+    justify-content: center;
+}
+
+#home {
+    display: flex;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+#nav {
+    width: 100 vh !important;
+    height: 20vh;
+}
+
+
+
+*/
