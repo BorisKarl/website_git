@@ -24,6 +24,3 @@
 
 <a href="fip.php">Zurück zur Fip Api</a>
 
-<form action="sendmail.php" method="post">
-    <button type="submit">Schick dir die Tabelle als mail!</button>
-</form>
