@@ -16,12 +16,22 @@
   </div>
 
   <a href="fipdb.php">Zur Datenbank</a>
-  <form action="insert.php" method="post">
-        <input type="hidden" name="name" value="<?php echo e(implode($artists[3])); ?>" />
-        <input type="hidden" name="title" value="<?php echo e($songs[3]); ?>" />
-        <input type="hidden" name="album" value="<?php echo e($albums[3]); ?>" />
-        <input type="hidden" name="jahr" value="<?php echo e($released[3]); ?>" />
-        <input type="submit" value="merken!">
+
+  <form id="insert_form" action="insert.php" method="post">
+      <input type="hidden" name="name" value="<?php echo e(implode($artists[3])); ?>" />
+      <input type="hidden" name="title" value="<?php echo e($songs[3]); ?>" />
+      <input type="hidden" name="album" value="<?php echo e($albums[3]); ?>" />
+      <input type="hidden" name="jahr" value="<?php echo e($released[3]); ?>" />
+      <input type="submit" value="Aktuellen Künstler merken!">
+</form>
+
+
+   <form action="insert.php" method="post">
+        <input type="hidden" name="name" value="<?php echo e(implode($artists[2])); ?>" />
+        <input type="hidden" name="title" value="<?php echo e($songs[2]); ?>" />
+        <input type="hidden" name="album" value="<?php echo e($albums[2]); ?>" />
+        <input type="hidden" name="jahr" value="<?php echo e($released[2]); ?>" />
+        <input type="submit" value="Künstler davor merken!">
   </form>
 <?php  }else{
                ?> <h1><?php echo $artistName; ?> </h1>
