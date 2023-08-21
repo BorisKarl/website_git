@@ -41,7 +41,7 @@ function isMobile() {
     return preg_match("/\bMobile\b/", $_SERVER["HTTP_USER_AGENT"]);
 }
 
-function fullNameOK ($string_1, $string_2) {
+function stringOK ($string_1, $string_2) {
     if(!empty($string_1) && !empty($string_2))
     {
         if(strcmp(strtolower($string_1), strtolower($string_2)) === 0){

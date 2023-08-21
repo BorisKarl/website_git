@@ -30,6 +30,11 @@ if ($FIP_data === null) {
     die('Fehler beim Abrufen der API-Daten.');
 }
 
+// var_dump($FIP_api_response);
+// var_dump($FIP_data);
+
+
+
 // var_dump($FIP_data);
 
 $artists = [];
@@ -83,6 +88,8 @@ $songTitle = $songs[3];
 
 // Formatieren der Suchbegriffe mit urllencode
 $searchQuery = urlencode("$songTitle $artistName");
+
+var_dump($searchQuery);
 
 // Genius API-Endpunkt-URL
 $geniusApiUrl = "https://api.genius.com/search?q=$searchQuery";
@@ -159,15 +166,27 @@ $lyrics_data = json_decode($genius_lyrics_response, true);
 // Zugriff auf die Liedtexte, um sie auf view anzuzeigen
 $embeded_lyrics = $lyrics_data['response']['song']["embed_content"];
 
-
+$gN = "Genius Name und Titel:";
+var_dump($gN);
 var_dump($genius_artist_name);
+var_dump($genius_song_title);
+$fN = "FIP Name und Titel:";
+var_dump($fN);
 var_dump($artistName);
-var_dump(fullNameOK($artistName, $genius_artist_name));
+var_dump($songTitle);
+$fNOK = "Artist Name Ok?";
+var_dump($fNOK);
+var_dump(stringOK($artistName, $genius_artist_name));
+$fTOK = "Titel Name Ok?";
+var_dump($fTOK);
+var_dump(stringOK($songTitle, $genius_song_title));
+$lE = "Lyrics empty?";
+var_dump($lE);
 var_dump(empty($embeded_lyrics));
-var_dump(strtolower($genius_artist_name));
+var_dump(strtolower($genius_song_title));
 
 
-if(!fullNameOK($artistName, $genius_artist_name) || empty($embeded_lyrics)) {
+if(!stringOK($artistName, $genius_artist_name) || !stringOK($songTitle, $genius_song_title) || empty($embeded_lyrics)) {
     $embeded_lyrics = "Keine Liedtexte vorhanden.";
 };
 
@@ -178,7 +197,7 @@ if(!fullNameOK($artistName, $genius_artist_name) || empty($embeded_lyrics)) {
     'albums' => $albums,
     'released' => $released,
     'apple_link' => $apple_link,
-    'data' => $data,
+    'FIP_data' => $FIP_data,
     'embeded_lyrics' => $embeded_lyrics
 ]);
 
