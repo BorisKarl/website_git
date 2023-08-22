@@ -133,6 +133,9 @@ if(is_null($genius_artist_name)){
     $genius_artist_name = "No Genius name";
 };
 
+if(is_null($genius_song_title)){
+    $genius_song_title = "No Genius title";
+};
 
 // url bauen
 $geniusSongUrl = "https://api.genius.com" . $api_path;
